@@ -18,7 +18,7 @@
             }
             body {
                 margin: 0px;
-                width: 1010px;
+                width: 100%;
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -31,14 +31,23 @@
     <body>
         <grandperents>
 
-            <perents>
-                {% include "headers.html" %}
+            <perents style="align-items: center;
+                            border-bottom: 4px double black;">
+                <center>
+                    {% include "headers.html" %}
+                </center>
             </perents>
 
-            <perents style="height: 400px;">
-                {% block solid %}
-                
-                {% endblock %}
+                <perents style="height: 400px;">
+                <center>
+                    <div style="width: 80%;display: flex;">
+                        <div>
+                            {% block solid %}
+                        
+                            {% endblock %}
+                        </div>
+                    </div>
+                </center>
             </perents>
 
         </grandperents>

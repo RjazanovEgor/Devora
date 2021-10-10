@@ -11,17 +11,21 @@
         <style>
             grandperents {
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
             }
             perents {
-                height: 200px;
-                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            perent{
+                display: flex;
             }
             body {
                 margin: 0px;
                 width: 100%;
                 margin-left: auto;
                 margin-right: auto;
+
             }
             h1, text {
                 color: black;
@@ -32,16 +36,18 @@
     <body>
         <grandperents>
 
-            <perents>
+            <perents style="background-color: rgb(218, 211, 239)">
                 {% include "headers.html" %}
             </perents>
 
             <perents>
-                {% include "left_column.html" %}
-            </perents>
+                <perent style="background-color: rgb(255, 0, 0)">
+                    {% include "left_column.html" %}
+                </perent>
 
-            <perents>
-                {% include "right_column.html" %}
+                <perent style="background-color: rgb(0, 255, 0)">
+                    {% include "right_column.html" %}
+                </perent>
             </perents>
 
         </grandperents>
